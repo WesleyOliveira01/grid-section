@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: hsl(0, 0%, 100%);
+
+  --card: hsl(0, 0%, 81%);
+  --card2: hsl(217, 19%, 35%);
+  --card4: hsl(219, 29%, 14%);
+  --card1: hsl(263, 55%, 52%);
+
+  --card1-paragraph:hsl(263, 69%, 73%);
+
+  --mainFont: "Barlow Semi Condensed", sans-serif;
+
+  --paragraphColor: hsl(210, 46%, 95%);
+  --paragraphColor2:hsl(217, 14%, 38%);
+
+}
+
+body {
+  background-color: var(--background);
+  font-family: var(--mainFont);
+}
+
+.container-principal {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  margin: 10%;
+  height: 60%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 32px 32px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "card1 card1 card2 card3"
+    "card5 card4 card4 card3";
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: aliceblue;
+  padding: 24px;
+  height: 100%;
+  background-color: var(--card);
+
+  box-shadow: 11px 17px 30px 15px rgba(0,0,0,0.1);
+}
+
+.card h1 {
+  margin-bottom: 3%;
+}
+
+.card-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin: 12px;
+}
+
+.profile-hero {
+  display: flex;
+  margin-bottom: 16px;
+}
+.card1 {
+  grid-area: card1;
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 90% 15%;
+  background-color: var(--card1);
+  color: var(--background);
+}
+
+.card1 p{
+    color: var(--card1-paragraph);
+}
+
+.card2 {
+  grid-area: card2;
+  background-color: var(--card2);
+  color: var(--background);
+}
+
+.card3 {
+  grid-area: card3;
+  color: var(--card4);
+}
+
+.card4 {
+  grid-area: card4;
+  background-color: var(--card4);
+  color: var(--background);
+}
+.card4 p{
+    color: var(--card2);
+}
+.card5 {
+  grid-area: card5;
+  color: var(--card4);
+}
+
+.card5,.card3 p{
+    color: var(--paragraphColor2);
+}
+
+
+.attribution {
+    margin: 5%;
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
